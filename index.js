@@ -142,8 +142,8 @@ plugin.manifest = function (pth, opts) {
 		var originalFile = path.join(path.dirname(revisionedFile), path.basename(file.revOrigPath)).replace(/\\/g, '/');
 
 		// manifest[originalFile] = revisionedFile;
-		manifest[originalFile] = originalFile + '?v=' + file.revHash;
-
+		manifest[originalFile] = originalFile + '?v=' + file.revHash; // modified by xiaocat @2016/5/30
+		
 		cb();
 	}, function (cb) {
 		// no need to write a manifest file if there's nothing to manifest
